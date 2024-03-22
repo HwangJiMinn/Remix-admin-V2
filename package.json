@@ -1,0 +1,66 @@
+{
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "build": "run-s \"build:*\"",
+    "build:css": "npm run generate:css -- --style=compressed",
+    "build:remix": "dotenv -e .env remix build",
+    "dev": "run-p \"dev:*\"",
+    "dev:css": "npm run generate:css -- --watch",
+    "dev:remix": "remix dev",
+    "generate:css": "sass styles/:app/styles/",
+    "start": "dotenv -e .env remix-serve build",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11",
+    "@emotion/server": "^11",
+    "@emotion/styled": "^11",
+    "@remix-run/css-bundle": "^2.8.0",
+    "@remix-run/node": "^2.8.0",
+    "@remix-run/react": "^2.8.0",
+    "@remix-run/serve": "^2.8.0",
+    "@remix-validated-form/with-yup": "^3.0.1",
+    "bcrypt": "^5.1.1",
+    "chart.js": "^4.4.1",
+    "clsx": "^2.0.0",
+    "dayjs": "^1.11.10",
+    "erc-20-abi": "^1.0.1",
+    "ethers": "5.7.2",
+    "framer-motion": "^6",
+    "isbot": "^3.6.8",
+    "mongoose": "^8.1.0",
+    "mongoose-autopopulate": "^1.1.0",
+    "react": "^18.3.0-canary-cb3404a0c-20230807",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.0-canary-cb3404a0c-20230807",
+    "recoil": "^0.7.7", 
+    "remix-validated-form": "^5.1.0",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.8.0",
+    "@remix-run/eslint-config": "^2.8.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.38.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "lint-staged": ">=10",
+    "npm-run-all": "^4.1.5",
+    "remix-development-tools": "^2.0.0",
+    "sass": "^1.64.2",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint ./app --cache --fix"
+  }
+}

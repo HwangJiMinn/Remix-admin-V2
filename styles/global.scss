@@ -1,0 +1,20 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+
+* {
+  font-family: Pretendard Variable, sans-serif !important;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+:root {
+  // * CSS 변수
+  --header-height: 5rem;
+  --footer-height: 5rem;
+  --border-color: #DEE2E6;
+}
+
+html {
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}

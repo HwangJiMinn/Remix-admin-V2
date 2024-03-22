@@ -1,0 +1,289 @@
+// * colors
+$color-primary: #E83F24;
+$color-white: #FFFFFF;
+$color-black: #0D0E0F;
+$color-gray-1: #F8F9FA;
+$color-gray-2: #F1F3F5;
+$color-gray-3: #E9ECEF;
+$color-gray-4: #DEE2E6;
+$color-gray-5: #CED4DA;
+$color-gray-6: #ADB5BD;
+$color-gray-7: #868E96;
+$color-gray-8: #495057;
+$color-gray-9: #292D2F;
+$color-gray-10: #151718;
+$color-red: #E83F24;
+$color-ice-blue: #0CB0E1;
+
+// * 현재 라이트 다크 테마 구분 없음
+html.light, html.dark {
+  background-color: $color-white;
+  color: $color-black;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-gray-10;
+  }
+
+  button {
+    color: $color-black;
+  }
+
+  // * CSS color 변수
+  --border-color: #{$color-gray-4};
+  --primary: #{$color-primary};
+  --white: #{$color-white};
+  --black: #{$color-black};
+  --gray-1: #{$color-gray-1};
+  --gray-2: #{$color-gray-2};
+  --gray-3: #{$color-gray-3};
+  --gray-4: #{$color-gray-4};
+  --gray-5: #{$color-gray-5};
+  --gray-6: #{$color-gray-6};
+  --gray-7: #{$color-gray-7};
+  --gray-8: #{$color-gray-8};
+  --gray-9: #{$color-gray-9};
+  --gray-10: #{$color-gray-10};
+  --red: #{$color-red};
+  --ice-blue: #{$color-ice-blue};
+
+  // * class
+  .footer {
+    background-color: $color-black;
+    color: $color-gray-7;
+  }
+
+  .text-button {
+    color: $color-gray-7;
+    &:hover {
+      color: $color-gray-8;
+    }
+  }
+
+  .basic-button {
+    background-color: $color-gray-8;
+    color: $color-white;
+  }
+
+  .rounded-button {
+    background-color: $color-gray-2;
+    color: $color-gray-7;
+
+    &:hover {
+      background-color: $color-gray-10;
+      color: $color-white;
+    }
+  }
+
+  .toggle-button {
+    background-color: transparent;
+    border: 1px solid #{$color-gray-5};
+    color: $color-gray-8;
+
+    &.is-show {
+      background-color: $color-gray-2;
+      border: 1px solid transparent;
+    }
+  }
+
+  .wide-button, .action-button {
+    &.primary {
+      background-color: $color-primary;
+      color: $color-white;
+    
+      &:disabled {
+        background-color: $color-gray-4;
+      }
+    }
+  
+    &.secondary {
+      background-color: $color-gray-9;
+      color: $color-white;
+    
+      &:disabled {
+        background-color: $color-gray-5;
+      }
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: $color-black;
+      border: 1px solid $color-black;
+    
+      &:disabled {
+        background-color: $color-gray-5;
+        border: 1px solid $color-gray-7;
+      }
+    }
+  }
+
+  .file-drop {
+    border: 2px dashed #{$color-gray-5};
+    background-color: $color-gray-1;
+  }
+
+  .basic-input {
+    border: 1px solid #{$color-gray-4};
+    color: $color-gray-10;
+  
+    &::placeholder {
+      color: $color-gray-6;
+    }
+  
+    &:disabled {
+      border: 1px solid #{$color-gray-2};
+      color: $color-gray-4;
+    }
+  }
+
+  .basic-checkbox {
+    label {
+      background-color: $color-gray-2;
+      color: $color-gray-2;
+
+      & > svg {
+        display: none;
+      }
+    }
+
+    input:checked + label {
+      background-color: $color-primary;
+      color: $color-white;
+
+      & > svg {
+        display: inline-block;
+      }
+    }
+
+    input:disabled + label {
+      opacity: 0.3;
+    }
+  }
+
+  .input-error-message {
+    color: $color-red !important;
+  }
+
+  .search {
+    & > input {
+      color: $color-black;
+
+      &::placeholder {
+        color: $color-gray-6;
+      }
+    
+      &:disabled {
+        border: 1px solid #{$color-gray-2};
+        color: $color-gray-4;
+      }
+    }
+  }
+
+  .elevated-card {
+    background-color: $color-white;
+    border: 1px solid #{$color-gray-3};
+    box-shadow: 10px 10px 20px 0px rgba(52, 68, 109, 0.10);
+
+    & p {
+      color: $color-gray-7;
+    }
+  }
+
+  .card {
+    background-color: $color-white;
+    border: 1px solid #{$color-gray-3};
+    color: $color-black;
+  }
+
+  .label-description {
+    color: $color-gray-6;
+  }
+
+  .basic-placeholder {
+    background-color: $color-gray-4;
+  }
+
+  .text-placeholder {
+    background-color: $color-gray-4;
+    color: $color-black;
+  }
+
+  .basic-tab {
+    color: $color-gray-6;
+  }
+
+  .basic-tab-selected {
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  .network-badge {
+    background-color: $color-gray-1;
+  }
+
+  .network-tag {
+    color: $color-gray-8;
+  }
+
+  .nft-metadata-info {
+    label {
+      color: $color-gray-6;
+    }
+  }
+
+  .address-badge {
+    color: $color-ice-blue;
+    background-color: $color-gray-1;
+  }
+
+  .address-button {
+    color: $color-black;
+    background-color: $color-gray-1;
+  }
+
+  .nft-info-description {
+    color: $color-gray-8;
+  }
+
+  .sales-info {
+    background-color: $color-gray-1;
+  }
+
+  .market-nft-item {
+    border: 1px solid $color-gray-4;
+  }
+
+  .wallet-badge {
+    background-color: $color-gray-9;
+  }
+
+  .sign-out-button {
+    background-color: $color-gray-2;
+  }
+
+  .signed-at {
+    background-color: $color-gray-2;
+    color: $color-gray-7;
+  }
+
+  .bubble {
+    background-color: $color-gray-9;
+    color: $color-gray-1;
+
+    &:after {
+      border-bottom-color: $color-gray-9;
+    }
+  }
+
+  .menu-item {
+    color: $color-gray-9;
+
+    &:active {
+      background-color: $color-gray-2;
+    }
+  }
+
+  .menu-item-connect {
+    background-color: $color-gray-8;
+    color: $color-white;
+  }
+}
